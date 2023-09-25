@@ -2,9 +2,10 @@ const cheeses = [
     {
         id: 1,
         image: 'gouda.png',
-        nombre: 'Gouda',
+        name: 'Gouda',
         price: 5.990,
         stock: 20,
+        description: 'Queso weno',
         /* country:'Paises Bajos' */
     }/*,  {
         id: 2,
@@ -130,18 +131,16 @@ export const getCheeses = () =>{
     return new Promise ((resolve) => {
         setTimeout (() => {
             return resolve (cheeses)
-        },2500)
+        },1500)
     })
 }
 
-export const getIdCheeses = (id) =>{
+export const getIdCheeses = (cheeseid) =>{
 
-    return new Promise ((resolve, reject) => {
+    return new Promise ((resolve) => {
         setTimeout(()=> {
-            const cheese = cheeses.find((chees)=> chees.id === id)
-            if (cheese)  return resolve(cheese)
-            return reject ({error: 'Queso No Encontrado'})
-        }, 200)
+            resolve (cheeses.find((chees)=> chees.id === cheeseid ) )
+        }, 1200)
     })
     
 }

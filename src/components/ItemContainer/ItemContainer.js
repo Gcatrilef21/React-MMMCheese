@@ -14,6 +14,7 @@ const ItemContainer = ({greeting}) => {
         getCheeses()
             .then((cheeses) => setCheese(cheeses))
             /* .catch(error => console.log(error)) */
+            /* .finally(()) */
     }, [])
 
 

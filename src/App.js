@@ -4,21 +4,32 @@ import Navbar from '../src/components/NavBar/index-nav';
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
-import CounterApp from './components/ItemCount/ItemCount';
 import ItemContainer from './components/ItemContainer/ItemContainer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Home from './components/pages/Home/home';
+import Products from './components/pages/Products/cheeses';
+
+
 
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <main className="header">
         <Navbar/>
-        <ItemContainer greeting={' Bienvenido '}/>
+        <Routes>
+          <Route path='/' element= {<Home/>} />
+          <Route path='/products' element= {<Products/>} />
+          <Route path='/products/:id' element= {<Products/>} />
+        </Routes>
+       {/*  <ItemContainer greeting={' Bienvenido '}/> */}
         <br/>
-        
-        {/* <CounterApp initial={0} stock={10} onAdd={(quantity) => console.log('Productos Agregados', quantity)}/> */}
+        {/* <ItemDetailContainer /> */}
       </main>
     </div>
+    </BrowserRouter>
   )
 }
 
