@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getIdCheeses } from "../../mock"
+import { getCheesesById } from "../../mock"
 import ItemDetail from "../ItemDetail/ItemDetail"
 import { useParams } from "react-router-dom"
 
@@ -12,7 +12,7 @@ const ItemDetailContainer = ()=> {
     const {idCheese} = useParams()
 
     useEffect(() => {
-        getIdCheeses(+idCheese)
+        getCheesesById('1')
             .then(resp => {setCheese(resp)})
             .catch(err => { console.error(err) })
     },[idCheese])

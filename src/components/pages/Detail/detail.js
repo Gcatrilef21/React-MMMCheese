@@ -11,20 +11,17 @@ const Detail = () => {
 
     useEffect (()=>{
 
-        getIdCheeses(Number(idCheese))
+        getCheesesById(idCheese)
             .then(cheese => {setCheese (cheese)} )  
             .catch(err => console.error(err))
-
 
     },[idCheese])
     
 
-    if (loading) return <p>Cargando Quesos...</p>
-
     return (
         <section>
             <h1>Detalle</h1>
-            {cheeses.map (({id, image,name,price,stock})=> (
+            {cheese.map (({id, image,name,price,stock})=> (
             <div key={id} class="card">
             <img className="imgProduct" src={image} alt={name}/>
             <h3>{name}</h3>
@@ -33,7 +30,7 @@ const Detail = () => {
                 <p>Stock: {stock}</p>
             </div>
             <footer>
-                <Link className="boton">detalle</Link>
+            <CounterApp initial={0} stock={stock} onAdd={(quantity) => console.log('Productos Agregados', quantity)}/>
             </footer>
         </div>
         ))}
