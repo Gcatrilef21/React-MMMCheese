@@ -4,7 +4,6 @@ import Navbar from '../src/components/NavBar/index-nav';
 import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap-icons/font/bootstrap-icons.min.css'
-import ItemContainer from './components/ItemContainer/ItemContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './components/pages/Home/home';
@@ -20,13 +19,12 @@ function App() {
       <main className="header">
         <Navbar/>
         <Routes>
-          <Route path='/' element= {<Home/>} />
+          <Route path='/' element= {<Home greeting={'Bienvenidos'}/>} />
           <Route path='/products' element= {<Products/>} />
-          <Route path='/products/:id' element= {<Products/>} />
+          <Route path='/products/:idCheese' element= {<Products/>} />
         </Routes>
-       {/*  <ItemContainer greeting={' Bienvenido '}/> */}
         <br/>
-        {/* <ItemDetailContainer /> */}
+        {<ItemDetailContainer />}
       </main>
     </div>
     </BrowserRouter>

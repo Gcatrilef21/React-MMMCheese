@@ -1,7 +1,9 @@
+import '../NavBar/NavBar.css'
+
 const  CartIcon = () => {
     return(
         <>
-            <i className="bi bi-bag-check-fill"> 
+            <i className="bi bi-cart-check-fill"> 
                 <span> 0 </span>
             </i> 
         </>

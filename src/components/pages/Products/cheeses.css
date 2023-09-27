@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Martel+Sans:wght@200&family=Mooli&family=Rancho&display=swap');
+
+/* font-family: 'Handlee', cursive;
+font-family: 'Martel Sans', sans-serif;
+font-family: 'Mooli', sans-serif;
+font-family: 'Rancho', cursive; */
+
+
+
+.load-product{
+    height: 60rem;
+    width: auto;
+}
+
+
+.card{
+    margin-top: 100px;
+    height: 380px;
+    width: 220px;
+    background-color:#ffffffcc ;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: #F3D180;
+    border-radius: 12px;
+    border: 1px solid #d1d5db4d;
+    padding: 2rem 1.5rem;
+    transition: box-shadow .3s ease, transform .2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 50px #23232333;
+}
+
+/* Image */
+
+.imgProduct{
+    border-radius: 40px;
+    width: 100%;
+    height: 43%;
+    padding: 2px;
+    transition: transform .2s ease;
+    margin-bottom: 1rem;
+    box-shadow: 0 8px 10px #21232A;
+}
+
+
+/* Text */
+
+h3{
+    color: #A65729 ;
+    font-weight: 900;
+    line-height: center;
+}
+
+.card-info {
+    color: #CE3426;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    text-decoration: none;
+    transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-footer {
+   /*  color: #CE3426;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 2rem;
+    transform: translateY(200%);
+    width: 100%;
+    opacity: 0;
+    transition: transform .2s ease, opacity .2s ease; */
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    height: auto;
+    transform: translateY(50%);
+    width: 100%;
+    opacity: 0;
+    transition: transform 3s ease, opacity .2s ease;
+    text-align: center;
+}
+
+.card-footer:hover{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    transform: translateY(-80%);
+    opacity: 1;
+}
+
+/* Hover */
+
+.card:hover .card-info {
+    transform: translateY(-5%);
+    opacity: 0;
+}
+

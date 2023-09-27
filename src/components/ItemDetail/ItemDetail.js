@@ -4,10 +4,10 @@ import CounterApp from "../ItemCount/ItemCount"
 const ItemDetail = ({ name, image, price, stock, description})  => {
 
     return (
-        <div class="card">
-            <img class="imgProduct" src={image} alt={name}/>
+        <div className="card">
+            <img className="imgProduct" src={image} alt={name}/>
             <h3>{name}</h3>
-            <div class="precio">
+            <div className="precio">
                 <p>Precio: {price}</p>
                 <p>Stock: {stock}</p>
                 <p>Descripcion: {description}</p>

@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react"
-import ItemDetail from "../ItemDetail/ItemDetail"
 import { getIdCheeses } from "../../mock"
+import ItemDetail from "../ItemDetail/ItemDetail"
+import { useParams } from "react-router-dom"
 
 
 
 const ItemDetailContainer = ()=> {
 
-    const [cheese, setCheese] = useState ()
+    const [cheese, setCheese] = useState (null)
+
+    const {idCheese} = useParams()
 
     useEffect(() => {
-        getIdCheeses()
+        getIdCheeses(+idCheese)
             .then(resp => {setCheese(resp)})
             .catch(err => { console.error(err) })
-    },[])
+    },[idCheese])
 
     return(
         <section>

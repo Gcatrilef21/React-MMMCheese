@@ -4,20 +4,21 @@ const cheeses = [
         image: 'gouda.png',
         name: 'Gouda',
         price: 5.990,
-        stock: 20,
+        stock: 6,
         description: 'Queso weno',
-        /* country:'Paises Bajos' */
+        country:'Paises Bajos'
     }/*,  {
         id: 2,
         image: 'edam.png' ,
         name: 'Edam',
         price: 9.990,
+        stock: 20,
         country:'Paises Bajos'
-    }, {
     }, {
         id: 3,
         image: 'maasdam.png',
         name: 'Maasdam',
+        stock: 15,
         price: 10.990,
         country: 'Países Bajos'
     }, {
@@ -25,12 +26,14 @@ const cheeses = [
         image: 'brie.png',
         name: 'Brie',
         price: 15.990,
+        stock: 10,
         country: 'Francia'
     }, {
         id: 5,
         image:'camembert.png',
         name: 'Camembert',
         price: 18.990,
+        stock: 4,
         country: 'Francia'
     }, {
         id: 6,
@@ -131,16 +134,18 @@ export const getCheeses = () =>{
     return new Promise ((resolve) => {
         setTimeout (() => {
             return resolve (cheeses)
-        },1500)
+        },500)
     })
 }
 
-export const getIdCheeses = (cheeseid) =>{
+export const getIdCheeses = (idCheese) =>{
 
     return new Promise ((resolve) => {
         setTimeout(()=> {
-            resolve (cheeses.find((chees)=> chees.id === cheeseid ) )
-        }, 1200)
+            console.log({idCheese})
+            const cheese = cheeses.find((chees)=> chees.id === idCheese ) 
+            if (cheese) return resolve (cheese)
+        }, 500)
     })
     
 }

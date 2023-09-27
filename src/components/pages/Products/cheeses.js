@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { getCheeses } from '../../../mock'
+import { Link } from 'react-router-dom'
+import './cheeses.css'
 
 const Products = () =>{
 
@@ -14,22 +16,22 @@ const Products = () =>{
             /* .finally(()) */
     }, [])
 
-
+    if (loading) return <p>Cargando Quesos...</p>
 
     return (
-        <section>
-            {cheeses.map (({image,name,price,stock})=> (
-            <>
+        <section className="load-product">
             <h1>Nuestros Productos</h1>
-            <div class="card">
-                <img class="imgProduct" src={image} alt={name}/>
+            {cheeses.map (({id, image,name,price,stock})=> (
+            <>
+            <div key={id} className="card">
+                <img className="imgProduct" src={`/images/${image}`} alt={name}/>
             <h3>{name}</h3>
-            <div class="precio">
+            <div className="card-info">
                 <p>Precio: {price}</p>
-                <p>Stock Disponible: {stock}</p>
+                <p>Stock: {stock}</p>
             </div>
             <footer>
-                <button className="boton">detalle</button>
+                <Link to ={`/products/${id}`} className="card-footer">detalle...</Link>
             </footer>
             </div>
             </>

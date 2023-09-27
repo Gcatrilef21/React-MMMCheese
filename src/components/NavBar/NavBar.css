@@ -1,8 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Martel+Sans:wght@200&family=Mooli&family=Rancho&display=swap');
 
-.navbar-container{
-    width: 12rem;
-    color: #78288c;
+/* font-family: 'Handlee', cursive;
+font-family: 'Martel Sans', sans-serif;
+font-family: 'Mooli', sans-serif;
+font-family: 'Rancho', cursive; */
+
+
+.navbar-contain{
+    display: inline-block;
+    color : #F27405;
+    position: relative;
+    background-color:#8c03038b;
+    padding: 5px 10px;
+    border: 2px solid #F27405;
+    border-radius: 34px;
+    font-size: 20px;
+    font-family: 'Martel Sans', sans-serif;
     text-decoration: none;
-    text-transform: uppercase   ;
-    display: inline;
+    text-transform: capitalize;
+    margin: 7px;
+    height: 40px;
+    width: 140px;
+    font-weight: 600;
+}
+.navbar-contain::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+}
+
+.navbar-contain:hover::before {
+    scale: 3;
+}
+
+
+.navbar-letter{
+    color : #8C0303;
+    font-size: 20px;
+    font-family: 'Mooli', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 7px;
+    height: 40px;
+    width: 190px;
+    font-weight: 600;
+}
+
+
+.navbar-letter:hover {
+    color: #8C0303;
+    scale: 1.1;
+    box-shadow: 0 0px 20px #c1a36266;
+    border: 2px solid #F27405;
+    border-radius: 34px;
+    padding: 5px 10px;
+}
+
+.bi-cart-check-fill{
+    color : #8C0303;
+    font-size: 20px;
+    font-family: 'Mooli', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    margin: 7px;
+    height: 40px;
+    width: 190px;
+    font-weight: 600;
+}
+.bi-cart-check-fill:hover {
+    color: #8C0303;
+    scale: 1.1;
+    box-shadow: 0 0px 20px #c1a36266;
+    border: 2px solid #F27405;
+    border-radius: 34px;
+    padding: 5px 10px;
 }

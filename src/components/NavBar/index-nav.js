@@ -22,7 +22,6 @@ const Navbar = () => {
     return (
 
         <header className="header">
-            <img className="imglogo" src={logo} alt="LogoQueso"/>
             <aside className="name1">
                 mmm
                 <span className="name2">cheese</span>
@@ -30,10 +29,11 @@ const Navbar = () => {
             <nav className="navbar-container">
                 <ul>
                     {routes.map((routes) => (
-                        <NavLink to={routes.path} className="nav-item">{routes.text}</NavLink>
-                    ))}
-                </ul>
+                        <NavLink to={routes.path} className= {( {isActive} ) => isActive ? 'navbar-contain' : 'navbar-letter'}>{routes.text}</NavLink>
+                        ))}
                 <CartIcon />
+                </ul>
+            <img className="imglogo" src={logo} alt="LogoQueso"/>
             </nav>
 
         </header>

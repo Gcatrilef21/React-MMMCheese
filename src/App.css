@@ -12,19 +12,21 @@ body {
   background-color: #F2F2F2;
 }
 
+
+
 .header{
   text-align: center;
   position: relative;
   background: #0D0D0D;
-  height: 180px;
+  height: 280px;
   border-bottom-left-radius: 50% 100%;
   border-bottom-right-radius: 50% 100%;
   box-shadow: 2px 10px 12px #8d909c;
 }
 
 .imglogo{
-  height:90px;
-  width: auto;
+  height:180px;
+  width: 200px;
 }
 
 .greeting{
