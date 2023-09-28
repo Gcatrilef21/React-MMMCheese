@@ -12,7 +12,7 @@ const ItemDetailContainer = ()=> {
     const {idCheese} = useParams()
 
     useEffect(() => {
-        getCheesesById('1')
+        getCheesesById(idCheese)
             .then(resp => {setCheese(resp)})
             .catch(err => { console.error(err) })
     },[idCheese])

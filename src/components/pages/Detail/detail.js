@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
-import { getIdCheeses } from "../../../mock"
-
+import { getCheesesById } from "../../../mock"
+import CounterApp from "../../ItemCount/ItemCount"
 
 const Detail = () => {
 
@@ -35,7 +35,6 @@ const Detail = () => {
         </div>
         ))}
     </section>
-
         
     )
     

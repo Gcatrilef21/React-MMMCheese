@@ -11,7 +11,6 @@ import Products from './components/pages/Products/cheeses';
 
 
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -21,10 +20,9 @@ function App() {
         <Routes>
           <Route path='/' element= {<Home greeting={'Bienvenidos'}/>} />
           <Route path='/products' element= {<Products/>} />
-          <Route path='/products/:idCheese' element= {<Products/>} />
+          <Route path='/products/:idCheese' element= {<ItemDetailContainer />} />
         </Routes>
         <br/>
-        {<ItemDetailContainer />}
       </main>
     </div>
     </BrowserRouter>

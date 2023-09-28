@@ -101,8 +101,8 @@ export const getCheesesById = (id) =>{
 
     return new Promise ((resolve, reject) => {
         setTimeout(()=> {
-            console.log({idCheese})
-            const cheese = cheeses.find((chees)=> chees.id === id) 
+            
+            const cheese = cheeses.find((chees)=> chees.id ===  parseInt(id)) 
             if (cheese) return resolve (cheese)
             return reject({ error: 'No Encontrado' })
         }, 1500)
